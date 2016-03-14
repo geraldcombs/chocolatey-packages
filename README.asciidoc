@@ -1,0 +1,10 @@
+= Chocolatey Packages =
+
+== For Wireshark ==
+
+This repository contains Chocolatey packaging metadata for some
+software required to develop Wireshark on Windows. It currently
+contains:
+
+- Apache FOP.
+- libxslt, which provides xsltproc.
