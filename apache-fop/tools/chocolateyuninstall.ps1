@@ -2,7 +2,7 @@
 #   $f='c:\path\to\thisFile.ps1'
 #   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
 
-Uninstall-BinFile -name 'fop' -path $toolsDir/apache-fop/tools/fop-2.1/fop.bat
+Uninstall-BinFile -name 'fop' -path "$toolsDir\fop-$($fopVersion)\fop.bat"
 
 ## OTHER HELPERS
 ## https://github.com/chocolatey/choco/wiki/HelpersReference
