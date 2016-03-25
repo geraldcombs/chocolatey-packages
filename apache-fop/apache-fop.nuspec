@@ -13,7 +13,7 @@
     <description>Java XSL-FO processor.
     </description>
     <projectUrl>https://xmlgraphics.apache.org/fop/</projectUrl>
-    <!--<packageSourceUrl></packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
     <projectSourceUrl>http://svn.apache.org/viewvc/xmlgraphics/fop/</projectSourceUrl>
     <docsUrl>https://xmlgraphics.apache.org/fop/quickstartguide.html</docsUrl>
     <mailingListUrl>https://xmlgraphics.apache.org/fop/maillist.html</mailingListUrl>
@@ -22,7 +22,7 @@
     <copyright>2016</copyright>
     <licenseUrl>https://xmlgraphics.apache.org/fop/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/apachefop.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/geraldcombs/chocolatey-packages/master/artwork/apache-icon-512.png</iconUrl>
     <dependencies>
       <dependency id="jre8" />
     </dependencies>
