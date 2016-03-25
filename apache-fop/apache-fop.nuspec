@@ -11,6 +11,8 @@
     <owners>Gerald Combs</owners>
     <summary>Apache Formatting Objects Processor</summary>
     <description>Java XSL-FO processor.
+    Converts Extensible Stylesheet Language Formatting Objects (XSL-FO)
+    to PDF, PS, PCL, AFP, and many other formats.
     </description>
     <projectUrl>https://xmlgraphics.apache.org/fop/</projectUrl>
     <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
@@ -19,7 +21,7 @@
     <mailingListUrl>https://xmlgraphics.apache.org/fop/maillist.html</mailingListUrl>
     <bugTrackerUrl>https://issues.apache.org/jira/issues/?jql=project%20%3D%20FOP</bugTrackerUrl>
     <tags>apache fop xsl docbook pdf</tags>
-    <copyright>2016</copyright>
+    <copyright>2016 The Apache Software Foundation</copyright>
     <licenseUrl>https://xmlgraphics.apache.org/fop/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/geraldcombs/chocolatey-packages/master/artwork/apache-icon-128.png</iconUrl>
