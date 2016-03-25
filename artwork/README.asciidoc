@@ -1,0 +1,9 @@
+= Chocolatey Package Artwork =
+
+The files in this directory should be used for artwork related to the
+packages in this repository.
+
+`apache-icon-512.png` was created from the ``Feather SVG'' image at
+http://www.apache.org/foundation/press/kit/ and converted to a PNG
+using Inkscape. The feather is a trademark of the Apache Software
+Foundation.
