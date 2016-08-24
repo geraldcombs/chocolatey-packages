@@ -4,12 +4,12 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$adocjVersion = '1.5.4.2'
+$adocjVersion = '1.5.4.1'
 $packageName= 'asciidoctorj' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Which is the preferred mirror? There are many listed at
 # http://www.apache.org/dyn/closer.cgi/xmlgraphics/fop
-$url        = "https://dl.bintray.com/ancho/experiment/org/asciidoctor/asciidoctorj/$($adocjVersion)/asciidoctorj-$($adocjVersion)-bin.zip" # download url
+$url        = "https://dl.bintray.com/asciidoctor/maven/org/asciidoctor/asciidoctorj/$($adocjVersion)/asciidoctorj-$($adocjVersion)-bin.zip" # download url
 #$url64      = '' # 64bit URL here or remove - if installer is both, use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = Join-Path $toolsDir 'SHARE_LOCATION_OF_INSTALLER_FILE'
@@ -18,7 +18,7 @@ $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   url           = $url
-  checksum      = '22558169cbe59cafafd68ff92eccf6910253dc71'
+  checksum      = '87b35a664f88fdfceab0ded36d7e264f62b8cd38'
   checksumType  = 'sha1' #default is md5, can also be sha1
   #checksum64    = ''
   #checksumType64= 'md5' #default is checksumType
