@@ -14,7 +14,9 @@
     <owners>Gerald Combs</owners>
     <summary>Java wrapper for AsciiDoctor.</summary>
     <description>Java wrapper and bindings for the Asciidoctor markup processor.
-    Converts AsciiDoc to HTML5, EPUB3, PDF, DocBook, and other formats.
+    Converts AsciiDoc to HTML5, EPUB3, PDF, DocBook, and other formats. To use, run
+    "asciidoctorj" along with any Asciidoctor command line flags, e.g. "asciidoctorj
+    -b pdf mydocument.adoc".
     </description>
     <projectUrl>http://asciidoctor.org/</projectUrl>
     <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
