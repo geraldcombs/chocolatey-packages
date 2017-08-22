@@ -2,10 +2,10 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <!-- Read this before publishing packages to chocolatey.org: https://chocolatey.org/docs/create-packages -->
     <id>asciidoctorj</id>
     <title>AsciidoctorJ (Install)</title>
-    <version>1.5.4.1</version>
+    <version>1.5.6</version>
     <!--
       https://github.com/asciidoctor/asciidoctorj/graphs/contributors
       https://github.com/asciidoctor/asciidoctor/graphs/contributors
@@ -25,14 +25,14 @@
     <mailingListUrl>http://discuss.asciidoctor.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/asciidoctor/asciidoctorj/issues</bugTrackerUrl>
     <tags>asciidoctor asciidoc docbook pdf</tags>
-    <copyright>2012-2016 Dan Allen, Ryan Waldron and the Asciidoctor Project</copyright>
+    <copyright>2012-2017 Dan Allen, Ryan Waldron and the Asciidoctor Project</copyright>
     <licenseUrl>https://raw.githubusercontent.com/asciidoctor/asciidoctorj/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- https://github.com/asciidoctor/asciidoctor/issues/48
     <iconUrl></iconUrl>
     -->
     <dependencies>
-      <dependency id="jre8" />
+      <dependency id="jre8" version="8.0" />
     </dependencies>
     <releaseNotes>Initial Chocolatey package</releaseNotes>
     <!--<provides></provides>-->

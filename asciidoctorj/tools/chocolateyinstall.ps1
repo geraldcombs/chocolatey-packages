@@ -4,7 +4,7 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$adocjVersion = '1.5.4.1'
+$adocjVersion = '1.5.6'
 $packageName= 'asciidoctorj' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Which is the preferred mirror? There are many listed at
@@ -18,7 +18,7 @@ $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   url           = $url
-  checksum      = '87b35a664f88fdfceab0ded36d7e264f62b8cd38'
+  checksum      = 'f2ca8f525c8dea71acd0df6405cd143690b1db78'
   checksumType  = 'sha1' #default is md5, can also be sha1
   #checksum64    = ''
   #checksumType64= 'md5' #default is checksumType
