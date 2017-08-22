@@ -4,7 +4,7 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$fopVersion = '2.1'
+$fopVersion = '2.2'
 $packageName= 'apache-fop' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Which is the preferred mirror? There are many listed at
@@ -18,7 +18,7 @@ $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   url           = $url
-  checksum      = '757d70e18dbca20229c0946914ee47470b31102d'
+  checksum      = 'f9ff2ecd4f5e9748b4d86a9f91367dc644962770'
   checksumType  = 'sha1' #default is md5, can also be sha1
   #checksum64    = ''
   #checksumType64= 'md5' #default is checksumType
@@ -29,4 +29,4 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-BinFile -name 'fop' -path "$toolsDir\fop-$($fopVersion)\fop.bat"
+Install-BinFile -name 'fop' -path "$toolsDir\fop-$($fopVersion)\fop\fop.bat"
