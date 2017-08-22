@@ -7,4 +7,5 @@ software required to develop Wireshark on Windows. It currently
 contains:
 
 - Apache FOP.
+- AsciidoctorJ
 - libxslt, which provides xsltproc.
