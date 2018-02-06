@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://chocolatey.org/docs/create-packages -->
+    <id>lynx-sl-stable</id>
+    <title>Lynx (slang, stable)</title>
+    <version>2.8.8</version>
+    <!-- https://xmlgraphics.apache.org/fop/team.html -->
+    <authors>Lou Montulli, Michael Grobe, Charles Rezac, Thomas E. Dickey et al</authors>
+    <owners>Gerald Combs</owners>
+    <summary>Text-mode web browser</summary>
+    <description>Text-mode web browser.
+    </description>
+    <projectUrl>https://invisible-island.net/lynx/</projectUrl>
+    <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
+    <!-- <projectSourceUrl>Thomas's RCS archives?</projectSourceUrl> -->
+    <docsUrl>https://lynx.invisible-island.net/lynx_help/lynx_help_main.html</docsUrl>
+    <mailingListUrl>https://lists.nongnu.org/mailman/listinfo/lynx-dev</mailingListUrl>
+    <!-- <bugTrackerUrl>Unknown</bugTrackerUrl> -->
+    <tags>notSilent lynx browser www</tags>
+    <copyright>2018 Thomas E. Dickey</copyright>
+    <!-- <licenseUrl>Unknown</licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl>Unknown</iconUrl> -->
+    <dependencies></dependencies>
+    <releaseNotes>Initial Chocolatey package</releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

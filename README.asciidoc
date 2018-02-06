@@ -7,5 +7,28 @@ software required to develop Wireshark on Windows. It currently
 contains:
 
 - Apache FOP.
-- AsciidoctorJ
 - libxslt, which provides xsltproc.
+- lynx
+
+== Quick Instructions
+
+. `cd` to the desired package directory.
+. Set the desired package version in '**package**.nuspec' and
+  'tools\chocolateyinstall.ps1'.
+. Run the following commands:
+
+----
+# Create the package
+> cd c:\to\this\directory
+> powershell ..\create-nupkg.ps1
+
+# Test the package. You'll probably have to run this as administrator.
+> choco install .\<package>.x.y.z.nupkg -dv -s .
+> where <binary>
+> <binary> ...other test commands
+
+# Log into https://chocolatey.org/account and copy your API key.
+# (This assumes you don't have a key set in your Chocolatey config.)
+# Push the package to chocolatey.org.
+> choco push --api-key=you-api-key <package>.x.y.z.nupkg
+----
