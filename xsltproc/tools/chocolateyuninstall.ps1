@@ -9,5 +9,12 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'xsltproc'
+$xsltprocVersion = '1.1.28'
 
-Uninstall-BinFile -name 'xsltproc' -path $toolsDir\xsltproc-1.1.26.win32\bin\xsltproc.exe
+$winBits = 64
+if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
+  $winBits = 32
+}
+foreach ($binfile in 'xmlcatalog', 'xmllint', 'xsltproc' ) {
+  Install-BinFile -name "$binfile" -path "$toolsDir\xsltproc-$($xsltprocVersion)-win$($winBits)\$($binfile).exe"
+}
