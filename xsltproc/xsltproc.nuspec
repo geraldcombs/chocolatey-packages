@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xsltproc</id>
     <title>xsltproc (Install)</title>
-    <version>1.1.26</version>
+    <version>1.1.28.0</version>
     <authors>Daniel Veillard, Bjorn Reese, Igor Zlatkovic, Aleksey Sanin</authors>
     <owners>Gerald Combs</owners>
     <summary>Command line XSLT processor</summary>

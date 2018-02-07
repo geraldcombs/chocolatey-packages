@@ -4,27 +4,27 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$xsltprocVersion = '1.1.26'
+$xsltprocVersion = '1.1.28'
 $packageName= 'xsltproc' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# The canonical URL is ftp.zlatkovic.com. However, that fails with Chocolatey
-# 0.9.9.11.
-#$url        = "ftp://ftp.zlatkovic.com/libxml/xsltproc-$($xsltprocVersion).win32.zip" # download url
-$url        = "http://xmlsoft.org/sources/win32/xsltproc-1.1.26.win32.zip" # download url
-# The 64-bit packages in ftp://ftp.zlatkovic.com/libxml/64bit/ have different
-# versions *and* file extensions. Stick with 32-bit only for now.
-#$url64      = '' # 64bit URL here or remove - if installer is both, use $url
-#$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
-#$fileLocation = Join-Path $toolsDir 'SHARE_LOCATION_OF_INSTALLER_FILE'
+# The canonical URL is ftp://ftp.zlatkovic.com/libxml/64bit/, however:
+# Chocolatey may not support FTP
+# The "packages" are a kit of disparate parts that you have to assemble
+# yourself.
+$url32        = "https://cdn.rawgit.com/geraldcombs/chocolatey-packages/xsltproc-1.1.28/xsltproc-1.1.28-win32.zip"
+$sha256sum32  = "eedb8f0195c25772abbb9a26264faf90052bb4ba935c6be95bd382c306e6ada8"
+$url64        = "https://cdn.rawgit.com/geraldcombs/chocolatey-packages/xsltproc-1.1.28/xsltproc-1.1.28-win64.zip"
+$sha256sum64  = "01c98a679c259ab4593074b96b3882921ce6bcdaaf7511912c59b9627a3563a8"
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  url           = $url
-  checksum      = '9ed852563c6f793f59e461ae5045b03fa5acc569'
-  checksumType  = 'sha1' #default is md5, can also be sha1
-  #checksum64    = ''
-  #checksumType64= 'md5' #default is checksumType
+  packageName     = $packageName
+  unzipLocation   = $toolsDir
+  url             = $url32
+  checksum        = $sha256sum32
+  checksumType    = 'sha256'
+  url64bit        = $url64
+  checksum64      = $sha256sum64
+  checksumType64  = 'sha256'
 }
 
 ## Main helper functions - these have error handling tucked into them already
@@ -32,4 +32,8 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-BinFile -name 'xsltproc' -path "$toolsDir\xsltproc-$($xsltprocVersion).win32\bin\xsltproc.exe"
+if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
+  Install-BinFile -name 'xsltproc' -path "$toolsDir\xsltproc-$($xsltprocVersion)-win32\xsltproc.exe"
+} else {
+  Install-BinFile -name 'xsltproc' -path "$toolsDir\xsltproc-$($xsltprocVersion)-win64\xsltproc.exe"
+}

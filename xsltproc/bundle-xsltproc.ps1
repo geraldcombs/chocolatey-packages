@@ -1,7 +1,7 @@
 #
 # bundle-xsltproc - Create a .zip archive containing xsltproc.exe
 #
-# Copyright 2016 Gerald Combs <gerald@wireshark.org>
+# Copyright 2018 Gerald Combs <gerald@wireshark.org>
 #
 # Based on tools\win-setup.ps1 from Wireshark
 # Wireshark - Network traffic analyzer
@@ -61,7 +61,8 @@ Param(
 # trouble instead of trying to catch exceptions everywhere.
 $ErrorActionPreference = "Stop"
 
-# 32-bit URLs
+# 32-bit files from ftp://ftp.zlatkovic.com/libxml/64bit/
+# NB the parent directory has older versions.
 
 $XsltprocWin32Ver = "1.1.28"
 
@@ -185,7 +186,7 @@ function DownloadArchive($fileName, $subDir) {
         Set-Variable -Name SevenZOut
     $bbStatus = $LASTEXITCODE
     Write-Progress -Activity "$activity" -Status "Done" -Completed
-    if ($bbStatus > 0) {
+    if ($bbStatus -gt 0) {
         Write-Output $SevenZOut
         exit 1
     }
