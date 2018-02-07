@@ -30,5 +30,5 @@ contains:
 # Log into https://chocolatey.org/account and copy your API key.
 # (This assumes you don't have a key set in your Chocolatey config.)
 # Push the package to chocolatey.org.
-> choco push --api-key=you-api-key <package>.x.y.z.nupkg
+> choco push --api-key=your-api-key <package>.x.y.z.nupkg
 ----
