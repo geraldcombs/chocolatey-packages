@@ -64,6 +64,8 @@ $ErrorActionPreference = "Stop"
 # 32-bit files from ftp://ftp.zlatkovic.com/libxml/64bit/
 # NB the parent directory has older versions.
 
+$bundleVer = "1"
+
 $XsltprocWin32Ver = "1.1.28"
 
 $MingwrtWin32Ver = "mingwrt-5.2.0"
@@ -196,8 +198,9 @@ function DownloadArchive($fileName, $subDir) {
 
 Bootstrap7Zip
 
-$OutDir32 = "xsltproc-$XsltprocWin32Ver-win32"
-$OutDir64 = "xsltproc-$XsltprocWin64Ver-win64"
+$OutDir32 = "xsltproc-$XsltprocWin32Ver-$bundleVer-win32"
+$OutDir64 = "xsltproc-$XsltprocWin64Ver-$bundleVer-win64"
+$extrasDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 # Make sure $WorkDir exists and do our work there.
 if ( -not (Test-Path $WorkDir -PathType 'Container') ) {
@@ -235,8 +238,10 @@ foreach ($item in $Win64Archives) {
 }
 
 Move-Item win32extract\bin "$OutDir32"
+Copy-Item "$extrasDir\xsltproc.bat" "$OutDir32"
 & "$SevenZip" a -tzip "$OutDir32.zip" "$OutDir32"
 
 Move-Item win64extract\bin "$OutDir64"
+Copy-Item "$extrasDir\xsltproc.bat" "$OutDir64"
 & "$SevenZip" a -tzip "$OutDir64.zip" "$OutDir64"
 

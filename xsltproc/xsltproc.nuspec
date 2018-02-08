@@ -5,11 +5,12 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xsltproc</id>
     <title>xsltproc (Install)</title>
-    <version>1.1.28.0</version>
+    <version>1.1.28.1</version>
     <authors>Daniel Veillard, Bjorn Reese, Igor Zlatkovic, Aleksey Sanin</authors>
     <owners>Gerald Combs</owners>
     <summary>Command line XSLT processor</summary>
     <description>The XSLT C library (libxslt) command line processor.
+    The default catalog location is %chocolateyinstall%\lib\docbook-bundle\catalog.xml.
     </description>
     <projectUrl>http://xmlsoft.org/XSLT/</projectUrl>
     <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
@@ -17,7 +18,7 @@
     <docsUrl>http://xmlsoft.org/XSLT/docs.html</docsUrl>
     <mailingListUrl>http://mail.gnome.org/archives/xslt/</mailingListUrl>
     <bugTrackerUrl>http://bugzilla.gnome.org/enter_bug.cgi?product=xsltproc</bugTrackerUrl>
-    <tags>xslt xsltproc xmllint xmlcatalog</tags>
+    <tags>xslt xsltproc xmllint xmlcatalog docbook</tags>
     <copyright>Copyright (C) 1998-2012 Daniel Veillard. All Rights Reserved.</copyright>
     <licenseUrl>https://git.gnome.org/browse/libxml2/plain/Copyright</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -26,7 +27,9 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes>Initial Chocolatey package</releaseNotes>
+    <releaseNotes>Add a wrapper script that sets XML_CATALOG_FILES
+    to the docbook-bundle catalog.file by default.
+    </releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>

@@ -5,6 +5,8 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $xsltprocVersion = '1.1.28'
+$bundleVersion = "1"
+
 $packageName= 'xsltproc' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # The canonical URL is ftp://ftp.zlatkovic.com/libxml/64bit/, however:
@@ -36,6 +38,6 @@ $winBits = 64
 if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
   $winBits = 32
 }
-foreach ($binfile in 'xmlcatalog', 'xmllint', 'xsltproc' ) {
-  Install-BinFile -name "$binfile" -path "$toolsDir\xsltproc-$($xsltprocVersion)-win$($winBits)\$($binfile).exe"
+foreach ($binfile in 'xmlcatalog.exe', 'xmllint.exe', 'xsltproc.bat' ) {
+  Install-BinFile -name "$($binfile.split('\.')[0])" -path "$toolsDir\xsltproc-$($xsltprocVersion)-$($bundleVersion)-win$($winBits)\$binfile"
 }
