@@ -13,10 +13,10 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Chocolatey may not support FTP
 # The "packages" are a kit of disparate parts that you have to assemble
 # yourself.
-$url32        = "https://github.com/geraldcombs/chocolatey-packages/releases/download/xsltproc-1.1.28.0/xsltproc-1.1.28-win32.zip"
-$sha256sum32  = "eedb8f0195c25772abbb9a26264faf90052bb4ba935c6be95bd382c306e6ada8"
-$url64        = "https://github.com/geraldcombs/chocolatey-packages/releases/download/xsltproc-1.1.28.0/xsltproc-1.1.28-win64.zip"
-$sha256sum64  = "01c98a679c259ab4593074b96b3882921ce6bcdaaf7511912c59b9627a3563a8"
+$url32        = "https://github.com/geraldcombs/chocolatey-packages/releases/download/xsltproc-1.1.28.1/xsltproc-1.1.28-1-win32.zip"
+$sha256sum32  = "b16cc1614ceb42d277f8765dbfb0661e17172af1d008e1a343dced63d910fa6f"
+$url64        = "https://github.com/geraldcombs/chocolatey-packages/releases/download/xsltproc-1.1.28.1/xsltproc-1.1.28-1-win64.zip"
+$sha256sum64  = "1b2dc264c0994a2c62842921ca2d97da960cf3a609a337ede4e0d32855ffd837"
 
 $packageArgs = @{
   packageName     = $packageName
@@ -38,6 +38,7 @@ $winBits = 64
 if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
   $winBits = 32
 }
-foreach ($binfile in 'xmlcatalog.exe', 'xmllint.exe', 'xsltproc.bat' ) {
-  Install-BinFile -name "$($binfile.split('\.')[0])" -path "$toolsDir\xsltproc-$($xsltprocVersion)-$($bundleVersion)-win$($winBits)\$binfile"
-}
+$xsltprocPath = "$toolsDir\xsltproc-$($xsltprocVersion)-$($bundleVersion)-win$($winBits)\xsltproc"
+New-Item "$xsltprocPath.exe.ignore" -type file -force | Out-Null
+
+Install-BinFile -name "xsltproc" -path "$xsltprocPath.bat"

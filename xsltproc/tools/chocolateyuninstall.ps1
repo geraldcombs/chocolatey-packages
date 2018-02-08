@@ -15,6 +15,6 @@ $winBits = 64
 if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
   $winBits = 32
 }
-foreach ($binfile in 'xmlcatalog', 'xmllint', 'xsltproc' ) {
-  Uninstall-BinFile -name "$binfile" -path "$toolsDir\xsltproc-$($xsltprocVersion)-win$($winBits)\$($binfile).exe"
-}
+$xsltprocBat = "$toolsDir\xsltproc-$($xsltprocVersion)-$($bundleVersion)-win$($winBits)\xsltproc.bat"
+
+Uninstall-BinFile -name "xsltproc" -path "$xsltprocBat"
