@@ -1,0 +1,6 @@
+= Docbook XML and XSL bundle.
+
+Installs the various DocBook .zip archives along with a catalog.xml.
+
+The catalog.xml uses relative paths. If that doesn't work we'll have
+to create a wrapper script.
