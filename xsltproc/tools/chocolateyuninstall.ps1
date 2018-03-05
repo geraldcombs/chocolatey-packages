@@ -8,13 +8,6 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$packageName = 'xsltproc'
-$xsltprocVersion = '1.1.28'
+$toolsDir           = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$winBits = 64
-if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86 -eq 'true') {
-  $winBits = 32
-}
-$xsltprocBat = "$toolsDir\xsltproc-$($xsltprocVersion)-$($bundleVersion)-win$($winBits)\xsltproc.bat"
-
-Uninstall-BinFile -name "xsltproc" -path "$xsltprocBat"
+Uninstall-BinFile -name "xsltproc" -path "$toolsDir\xsltproc.bat"

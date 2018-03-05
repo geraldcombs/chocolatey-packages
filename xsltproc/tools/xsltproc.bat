@@ -11,4 +11,4 @@ if not defined XML_CATALOG_FILES (
 
 rem On with the show.
 
-"%~dp0"\xsltproc.exe %*
+"%~dp0\..\dist\bin\xsltproc.exe" %*

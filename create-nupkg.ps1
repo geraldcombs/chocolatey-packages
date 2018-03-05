@@ -6,8 +6,10 @@
 # - Restore tools\*.ps1
 
 git diff-index --quiet HEAD > $Null 2>&1
-if (-not $LastExitCode) {
+if (-not $?) {
     Write-Error "Please commit your changes to git first."
+    git status
+    Exit 1
 }
 
 # Expanded from the comment at the top of chocolateyinstall.ps1.
