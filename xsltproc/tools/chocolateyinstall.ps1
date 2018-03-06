@@ -104,5 +104,6 @@ Install-ChocolateyZipPackage @zlibPackageArgs
 Install-ChocolateyZipPackage @libxmlPackageArgs
 Install-ChocolateyZipPackage @libxsltPackageArgs
 
+New-Item "$unzipDir\bin\iconv.exe.ignore" -type file -force | Out-Null
 New-Item "$unzipDir\bin\xsltproc.exe.ignore" -type file -force | Out-Null
 Install-BinFile -name "xsltproc" -path "$toolsDir\xsltproc.bat"
