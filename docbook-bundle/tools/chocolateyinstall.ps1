@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName        = 'docbook-bundle'
 $catalogDir         = "$env:chocolateyinstall\lib\$packageName"
-$docbookXmlUrl      = 'http://www.docbook.org/xml/5.0/docbook-5.0.zip'
+$docbookXmlUrl      = 'https://www.docbook.org/xml/5.0/docbook-5.0.zip'
 $docbookXmlSha256   = '3dcd65e1f5d9c0c891b3be204fa2bb418ce485d32310e1ca052e81d36623208e'
 $docbookXslNsUrl    = 'https://sourceforge.net/projects/docbook/files/docbook-xsl-ns/1.79.1/docbook-xsl-ns-1.79.1.zip/download'
 $docbookXslNsSha256 = 'bea820a5522a161ffb077122c7018f750018e292c165ee5148ae649eea1341ec'

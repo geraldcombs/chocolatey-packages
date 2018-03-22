@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>docbook-bundle</id>
     <title>DocBook XML and XSL bundle</title>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Norm Walsh, Robert Stayton, et al</authors>
     <owners>Gerald Combs</owners>
     <summary>DocBook XML and XSL bundle</summary>
@@ -28,7 +28,7 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes>Initial Chocolatey package</releaseNotes>
+    <releaseNotes>Switched DocBook XML URL to HTTPS.</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
