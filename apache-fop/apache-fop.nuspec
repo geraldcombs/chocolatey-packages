@@ -5,14 +5,15 @@
     <!-- Read this before publishing packages to chocolatey.org: https://chocolatey.org/docs/create-packages -->
     <id>apache-fop</id>
     <title>Apache™ FOP (Install)</title>
-    <version>2.2</version>
+    <version>2.4</version>
     <!-- https://xmlgraphics.apache.org/fop/team.html -->
     <authors>James Tauber, Glenn Adams, Chris Bowditch, et al</authors>
     <owners>Gerald Combs</owners>
     <summary>Apache Formatting Objects Processor</summary>
     <description>Java XSL-FO processor.
-    Converts Extensible Stylesheet Language Formatting Objects (XSL-FO)
-    to PDF, PS, PCL, AFP, and many other formats.
+      Converts Extensible Stylesheet Language Formatting Objects (XSL-FO) to PDF,
+      PS, PCL, AFP, and many other formats. Requires a Java runtime such as jre8,
+      corretto8jre, or adoptopenjdk8jre.
     </description>
     <projectUrl>https://xmlgraphics.apache.org/fop/</projectUrl>
     <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
@@ -25,10 +26,13 @@
     <licenseUrl>https://xmlgraphics.apache.org/fop/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/geraldcombs/chocolatey-packages/master/artwork/apache-icon-128.png</iconUrl>
+    <!--
+      XXX Add other JREs and JVMs when https://github.com/chocolatey/choco/issues/879 is fixed?
     <dependencies>
-      <dependency id="jre8" version="8.0" />
+      <dependency id="javaruntime" />
     </dependencies>
-    <releaseNotes>Initial Chocolatey package</releaseNotes>
+    -->
+    <releaseNotes>Update to 2.4.</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>

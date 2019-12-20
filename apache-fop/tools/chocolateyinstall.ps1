@@ -4,7 +4,7 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$fopVersion = '2.2'
+$fopVersion = '2.4'
 $packageName= 'apache-fop' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Which is the preferred mirror? There are many listed at
@@ -18,8 +18,8 @@ $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   url           = $url
-  checksum      = 'f9ff2ecd4f5e9748b4d86a9f91367dc644962770'
-  checksumType  = 'sha1' #default is md5, can also be sha1
+  checksum      = 'cd72e0145c3a1f1043df2b387b6a5bfefc7f083df25ebbccb8df04d17f16c7512543553d89678bfe0c425b511e23a772ee1408ac97f738ebaebe8f9ad3bbabd3'
+  checksumType  = 'sha512' #default is md5, can also be sha1
   #checksum64    = ''
   #checksumType64= 'md5' #default is checksumType
 }
