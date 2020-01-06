@@ -26,6 +26,6 @@ Foreach-Object {
     Out-File $stripfile+".~" -en utf8; mv -fo $stripfile+".~" $stripfile
 }
 
-cpack
+choco pack
 
 git checkout -- tools\
