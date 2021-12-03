@@ -2,7 +2,7 @@
 #   $f='c:\path\to\thisFile.ps1'
 #   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
 
-$fopVersion = '2.4'
+$fopVersion = '2.6'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Uninstall-BinFile -name 'fop' -path "$toolsDir\fop-$($fopVersion)\fop.bat"
 
