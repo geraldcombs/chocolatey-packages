@@ -2,6 +2,18 @@
 <!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
   <nextCatalog catalog="./docbook-5.0/catalog.xml"/>
-  <nextCatalog catalog="./docbook-xsl-ns-1.79.1/catalog.xml"/>
-  <nextCatalog catalog="./docbook-xsl-1.79.1/catalog.xml"/>
+  <nextCatalog catalog="./docbook-xsl-1.79.2/catalog.xml"/>
+  <nextCatalog catalog="./docbook-xsl-nons-1.79.2/catalog.xml"/>
+
+  <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl/current" rewritePrefix="./docbook-xsl-1.79.2"/>
+  <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl/current" rewritePrefix="./docbook-xsl-1.79.2"/>
+
+  <rewriteURI uriStartString="http://docbook.sourceforge.net/release/xsl/current" rewritePrefix="./docbook-xsl-1.79.2"/>
+  <rewriteSystem systemIdStartString="http://docbook.sourceforge.net/release/xsl/current" rewritePrefix="./docbook-xsl-1.79.2"/>
+
+  <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl-nons/current" rewritePrefix="./docbook-xsl-nons-1.79.2"/>
+  <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl-nons/current" rewritePrefix="./docbook-xsl-nons-1.79.2"/>
+
+  <rewriteURI uriStartString="http://docbook.sourceforge.net/release/xsl-nons/current" rewritePrefix="./docbook-xsl-nons-1.79.2"/>
+  <rewriteSystem systemIdStartString="http://docbook.sourceforge.net/release/xsl-nons/current" rewritePrefix="./docbook-xsl-nons-1.79.2"/>
 </catalog>

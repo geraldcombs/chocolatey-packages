@@ -8,10 +8,10 @@ $packageName        = 'docbook-bundle'
 $catalogDir         = "$env:chocolateyinstall\lib\$packageName"
 $docbookXmlUrl      = 'https://www.docbook.org/xml/5.0/docbook-5.0.zip'
 $docbookXmlSha256   = '3dcd65e1f5d9c0c891b3be204fa2bb418ce485d32310e1ca052e81d36623208e'
-$docbookXslNsUrl    = 'https://sourceforge.net/projects/docbook/files/docbook-xsl-ns/1.79.1/docbook-xsl-ns-1.79.1.zip/download'
-$docbookXslNsSha256 = 'bea820a5522a161ffb077122c7018f750018e292c165ee5148ae649eea1341ec'
-$docbookXslUrl      = 'https://sourceforge.net/projects/docbook/files/docbook-xsl/1.79.1/docbook-xsl-1.79.1.zip/download'
-$docbookXslSha256   = '720e3158bd6d743a6a919ac470d21048244f0755ecd621d9200c1cb7134e0d48'
+$docbookXslNoNsUrl  = 'https://github.com/docbook/xslt10-stylesheets/releases/download/release%2F1.79.2/docbook-xsl-nons-1.79.2.zip'
+$docbookXslNoNsSha256 = 'ba41126fbf4021e38952f3074dc87cdf1e50f3981280c7a619f88acf31456822'
+$docbookXslUrl      = 'https://github.com/docbook/xslt10-stylesheets/releases/download/release%2F1.79.2/docbook-xsl-1.79.2.zip'
+$docbookXslSha256   = '853dce096f5b32fe0b157d8018d8fecf92022e9c79b5947a98b365679c7e31d7'
 
 $docbookXmlPackageArgs = @{
   packageName   = 'docbook-xml'
@@ -21,11 +21,11 @@ $docbookXmlPackageArgs = @{
   checksumType  = 'sha256'
 }
 
-$docbookXslNsPackageArgs = @{
-  packageName   = 'docbook-xsl-ns'
+$docbookXslNoNsPackageArgs = @{
+  packageName   = 'docbook-xsl-nons'
   unzipLocation = $catalogDir
-  url           = $docbookXslNsUrl
-  checksum      = $docbookXslNsSha256
+  url           = $docbookXslNoNsUrl
+  checksum      = $docbookXslNoNsSha256
   checksumType  = 'sha256'
 }
 
@@ -41,5 +41,5 @@ $docbookXslPackageArgs = @{
 ## see https://github.com/chocolatey/choco/wiki/HelpersReference
 
 Install-ChocolateyZipPackage @docbookXmlPackageArgs
-Install-ChocolateyZipPackage @docbookXslNsPackageArgs
+Install-ChocolateyZipPackage @docbookXslNoNsPackageArgs
 Install-ChocolateyZipPackage @docbookXslPackageArgs
