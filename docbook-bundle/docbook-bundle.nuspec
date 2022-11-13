@@ -13,15 +13,15 @@
     This bundle includes DocBook XML 5.0 and DocBook XSL 1.79.2. A catalog file is
     installed at %chocolateyinstall%\lib\docbook-bundle\catalog.xml.
     </description>
-    <projectUrl>http://www.docbook.org/</projectUrl>
+    <projectUrl>https://www.docbook.org/</projectUrl>
     <packageSourceUrl>https://github.com/geraldcombs/chocolatey-packages</packageSourceUrl>
-    <projectSourceUrl>https://sourceforge.net/p/docbook/code/HEAD/tree/</projectSourceUrl>
-    <docsUrl>http://www.docbook.org/</docsUrl>
-    <mailingListUrl>http://wiki.docbook.org/DocBookMailingList</mailingListUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/docbook/bugs/</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/docbook/xslt10-stylesheets/</projectSourceUrl>
+    <docsUrl>https://www.docbook.org/</docsUrl>
+    <mailingListUrl>https://github.com/docbook/wiki/wiki/DocBookMailingList</mailingListUrl>
+    <bugTrackerUrl>https://github.com/docbook/xslt10-stylesheets/issues</bugTrackerUrl>
     <tags>docbook documentation xsltproc asciidoctorj</tags>
     <copyright>2008, OASIS</copyright>
-    <licenseUrl>http://wiki.docbook.org/DocBookLicense</licenseUrl>
+    <licenseUrl>https://github.com/docbook/wiki/wiki/DocBookLicense</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/docbook/docbook.org/master/graphics/banner.png</iconUrl>
     <!--<dependencies>
