@@ -8,7 +8,7 @@ contains:
 
 - Apache FOP.
 - libxslt, which provides xsltproc.
-- lynx
+- A DocBook XML and XSL bundle.
 
 == Quick Instructions
 
